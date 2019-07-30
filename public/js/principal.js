@@ -5,8 +5,9 @@ var numPalavras = frase.split(" ").length;
 var tamanhoFrase = $("#js-tamanho-frase");
 tamanhoFrase.text(numPalavras);
 
+var textArea = $(".js-campo-digitacao");
 // Contadores do textarea
-$(".js-campo-digitacao").on("input", function(){
+textArea.on("input", function() {
     var conteudo = $(this).val();
 
     var qtdCarateres = conteudo.length;
@@ -14,4 +15,17 @@ $(".js-campo-digitacao").on("input", function(){
 
     var qtdPalavras = conteudo.split(/\S+/).length - 1;
     $("#js-contador-palavras").text(qtdPalavras);
+});
+
+var tempoRestante = $("#js-tempo-digitacao").text();
+textArea.one("focus", function() {
+    var cronometroID = setInterval(function() {
+        tempoRestante--;
+        $("#js-tempo-digitacao").text(tempoRestante);
+
+        if (tempoRestante < 1) {
+            textArea.attr("disabled", true)
+            clearInterval(cronometroID);
+        }
+    }, 1000);
 });
