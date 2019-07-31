@@ -38,6 +38,7 @@ function inicializaCronometro() {
             if (tempoRestante < 1) {
                 textArea.attr("disabled", true)
                 clearInterval(cronometroID);
+                textArea.addClass("campo-desabilitado");
             }
         }, 1000);
     });   
@@ -48,6 +49,7 @@ function reiniciaJogo () {
     $("#js-contador-palavras").text("0");
     $("#js-contador-caracteres").text("0");
     $("#js-tempo-digitacao").text(tempoInicial);
+    textArea.removeClass("campo-desabilitado");
     inicializaCronometro();
 }
 
