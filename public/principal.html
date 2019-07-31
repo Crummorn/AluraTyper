@@ -2,8 +2,11 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+
     <title>Alura Typer</title>
+
     <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -12,12 +15,26 @@
         <p class="center js-frase">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     
         <ul class="center informacoes">
-            <li><span id="js-tamanho-frase">19</span> palavras</li>
-            <li><span id="js-tempo-digitacao">5</span> segundos</li>
+            <li>
+                <i class="small material-icons">description</i>
+                <span id="js-tamanho-frase">19</span> palavras
+            </li>
+            <li>
+                <i class="small material-icons">query_builder</i>
+                <span id="js-tempo-digitacao">5</span> segundos
+            </li>
         </ul>
     
         <textarea class="campo js-campo-digitacao" rows="10" cols ="100"></textarea>
-        <button id="js-botao-reiniciar">Reiniciar Jogo</button>
+
+        <div class="botoes">
+            <a class="btn-floating btn-large waves-effect waves-light red" title="Add">
+                <i class="material-icons">add</i>
+            </a>
+            <a id="js-botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red" title="Resetar">
+                <i class="material-icons">restore</i>
+            </a>
+        </div>
     
         <ul class="center">
             <li><span id="js-contador-caracteres">0</span> caracteres</li>
