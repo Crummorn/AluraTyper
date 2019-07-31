@@ -30,6 +30,8 @@ function inicializaContadores() {
 
 function inicializaCronometro() {
     var tempoRestante = $("#js-tempo-digitacao").text();
+    $("#js-botao-reiniciar").addClass("disabled");
+
     textArea.one("focus", function() {
         var cronometroID = setInterval(function() {
             tempoRestante--;
@@ -39,10 +41,12 @@ function inicializaCronometro() {
                 textArea.attr("disabled", true)
                 clearInterval(cronometroID);
                 textArea.addClass("campo-desabilitado");
+                $("#js-botao-reiniciar").removeClass("disabled");
             }
         }, 1000);
     });   
 }
+
 function reiniciaJogo () {
     textArea.attr("disabled", false);
     textArea.val("");
