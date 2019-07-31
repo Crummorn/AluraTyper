@@ -43,6 +43,7 @@ function inicializaCronometro() {
                 clearInterval(cronometroID);
                 textArea.addClass("campo-desabilitado");
                 $("#js-botao-reiniciar").removeClass("disabled");
+                inserePlacar();
             }
         }, 1000);
     });   
@@ -76,4 +77,19 @@ function inicializaMarcadores() {
             textArea.removeClass("borda-verde");
         }
     });
+}
+
+function inserePlacar(){
+    var placar = $(".js-placar");
+    var corpoTabela = placar.find("tbody");
+
+    var usuario = "Douglas";
+    var numPalavras = $("#js-contador-palavras").text();
+    
+    var linha = "<tr>"+
+                    "<td>"+ usuario + "</td>"+
+                    "<td>"+ numPalavras + "</td>"+
+                "</tr>";
+
+    corpoTabela.prepend(linha);
 }
