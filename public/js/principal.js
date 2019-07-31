@@ -49,7 +49,7 @@ function inicializaCronometro() {
     });   
 }
 
-function reiniciaJogo () {
+function reiniciaJogo() {
     textArea.attr("disabled", false);
     textArea.val("");
     $("#js-contador-palavras").text("0");
@@ -78,25 +78,3 @@ function inicializaMarcadores() {
         }
     });
 }
-
-function inserePlacar(){
-    var placar = $(".js-placar");
-    var corpoTabela = placar.find("tbody");
-
-    var usuario = "Douglas";
-    var numPalavras = $("#js-contador-palavras").text();
-
-    var botaoRemover = "<a href='#' class='js-botao-removerr'><i class='small material-icons'>delete</i></a>" ;
-    var linha = "<tr>"+
-                    "<td>"+ usuario + "</td>"+
-                    "<td>"+ numPalavras + "</td>"+
-                    "<td>"+ botaoRemover + "</td>"+
-                "</tr>";
-
-    corpoTabela.prepend(linha);
-}
-
-$(".js-botao-remover").click(event, function(){
-    event.preventDefault();
-    $(this).parent().parent().remove();
-})
