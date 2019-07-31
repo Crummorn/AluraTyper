@@ -1,6 +1,7 @@
 .campo {
     font-size: 20px;
     height: 130px;
+    border: 3px solid black;
 }
 
 .campo-desabilitado {
@@ -9,8 +10,17 @@
 
 .frase {
     font-size: 20px;
+    text-align: left;
 }
 
 .icones {
     vertical-align: middle;
+}
+
+.borda-verde {
+    border: 3px solid green;
+}
+
+.borda-vermelha {
+    border: 3px solid red;
 }
