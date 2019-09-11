@@ -17,7 +17,6 @@ function inserePlacar() {
 
 function scrollPlacar() {
     var posicaoPlacar = $(".js-placar").offset().top;
-    console.log(posicaoPlacar);
 
     $("html, body").animate({
         scrollTop: posicaoPlacar
