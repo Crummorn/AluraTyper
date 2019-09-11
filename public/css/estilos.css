@@ -31,3 +31,11 @@ body {
 .js-placar {
     display: none;
 }
+
+#js-error {
+    display: none;
+}
+
+#js-spinner {
+    display: none;
+}

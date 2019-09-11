@@ -1,7 +1,19 @@
 $("#js-botao-frase").click(fraseAleatoria);
 
 function fraseAleatoria() {
-    $.get("http://localhost:3000/frases", trocaFraseAleatoria);
+    $("#js-spinner").show();
+
+    $.get("http://localhost:3000/frases", trocaFraseAleatoria)
+    .fail(function() {
+        $("#js-error").show();
+
+        setTimeout(function () {
+            $("#js-error").hide();
+        }, 3000);
+    })
+    .always(function () {
+        $("#js-spinner").hide();
+    });
 }
 
 function trocaFraseAleatoria(data) {
