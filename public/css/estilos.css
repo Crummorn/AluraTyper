@@ -40,6 +40,10 @@ body {
     display: none;
 }
 
-#js-frase-id{
+#js-frase-id {
     width: 40px;
+}
+
+#js-botao-sync {
+    float: right;
 }
