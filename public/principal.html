@@ -8,14 +8,18 @@
 
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css" />
+
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
     <div class="container">
         <h1 class="center">Alura Typer</h1>
-        <p class="center js-frase">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    
+        <p class="center js-frase">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+
         <div class="center">
             <img src="img/spinner.gif" alt="Spinner" id="js-spinner">
             <p id="js-error" class="red-text">
@@ -28,14 +32,14 @@
                 <i class="small material-icons">description</i>
                 <span id="js-tamanho-frase">19</span> palavras
             </li>
-            
+
             <li>
                 <i class="small material-icons">query_builder</i>
                 <span id="js-tempo-digitacao">2</span> segundos
             </li>
         </ul>
-    
-        <textarea class="campo js-campo-digitacao" rows="10" cols ="100"></textarea>
+
+        <textarea class="campo js-campo-digitacao" rows="10" cols="100"></textarea>
 
         <div class="botoes">
             <a id="js-botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red" title="Resetar">
@@ -55,11 +59,20 @@
             </a>
             <input type="number" id="js-frase-id" min="0">
 
-            <a id="js-botao-sync" class="btn-floating btn-large waves-effect waves-light yellow" title="Sincronizar Placar">
+            <a id="js-botao-sync" class="btn-floating btn-large waves-effect waves-light yellow tooltip"
+                title="Dados Sincronizado com Sucesso!">
                 <i class="material-icons">swap_vert</i>
             </a>
+
+            <div class="js-select-usuarios">
+                <select id="usuarios">
+                    <option value="Douglas">Douglas</option>
+                    <option value="Flavio">Flavio</option>
+                    <option value="Nico">Nico</option>
+                </select>
+            </div>
         </div>
-    
+
         <ul class="center">
             <li><span id="js-contador-caracteres">0</span> caracteres</li>
             <li><span id="js-contador-palavras">0</span> palavras</li>
@@ -84,8 +97,13 @@
     </div>
 
     <script src="js/jquery.js"></script>
+    <script src="js/selectize.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+
     <script src="js/principal.js"></script>
+    
     <script src="js/placar.js"></script>
     <script src="js/frase.js"></script>
 </body>
+
 </html>
