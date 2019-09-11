@@ -39,3 +39,7 @@ body {
 #js-spinner {
     display: none;
 }
+
+#js-frase-id{
+    width: 40px;
+}
